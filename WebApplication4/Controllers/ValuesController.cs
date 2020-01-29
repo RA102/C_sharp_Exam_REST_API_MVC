@@ -4,10 +4,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Security;
 
 namespace WebApplication4.Controllers
 {
-    [Authorize]
+    [Authorize(Users = "admin@mail.loc")]
     public class ValuesController : ApiController
     {
         // GET api/values
@@ -36,5 +37,6 @@ namespace WebApplication4.Controllers
         public void Delete(int id)
         {
         }
+
     }
 }
