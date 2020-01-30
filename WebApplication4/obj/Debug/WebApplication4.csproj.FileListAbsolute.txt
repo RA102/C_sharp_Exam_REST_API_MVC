@@ -132,10 +132,11 @@ C:\Users\r.aushev\source\repos\WebApplication4\WebApplication4\bin\ru\Microsoft.
 C:\Users\r.aushev\source\repos\WebApplication4\WebApplication4\bin\ru\Microsoft.Owin.Security.Twitter.resources.dll
 C:\Users\r.aushev\source\repos\WebApplication4\WebApplication4\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
 C:\Users\r.aushev\source\repos\WebApplication4\WebApplication4\bin\ru\System.Web.Http.Owin.resources.dll
-C:\Users\r.aushev\source\repos\WebApplication4\WebApplication4\obj\Debug\WebApplication4.csprojAssemblyReference.cache
 C:\Users\r.aushev\source\repos\WebApplication4\WebApplication4\obj\Debug\WebApplication4.csproj.CopyComplete
 C:\Users\r.aushev\source\repos\WebApplication4\WebApplication4\obj\Debug\WebApplication4.dll
 C:\Users\r.aushev\source\repos\WebApplication4\WebApplication4\obj\Debug\WebApplication4.pdb
 C:\Users\r.aushev\source\repos\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.firstMigration.resources
 C:\Users\r.aushev\source\repos\WebApplication4\WebApplication4\obj\Debug\WebApplication4.csproj.GenerateResource.cache
 C:\Users\r.aushev\source\repos\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.addAlmostAllTable.resources
+C:\Users\r.aushev\source\repos\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.correctTableCoach.resources
+C:\Users\r.aushev\source\repos\WebApplication4\WebApplication4\obj\Debug\WebApplication4.csprojAssemblyReference.cache

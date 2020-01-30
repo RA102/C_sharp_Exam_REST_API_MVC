@@ -9,7 +9,7 @@ using System.Web.Security;
 
 namespace WebApplication4.Models
 {
-    public class AppDbInitializer : DropCreateDatabaseAlways<ApplicationDbContext>
+    public class AppDbInitializer : CreateDatabaseIfNotExists<ApplicationDbContext>
     {
 
         protected override void Seed(ApplicationDbContext context)
@@ -21,11 +21,11 @@ namespace WebApplication4.Models
             var roleCoach = new IdentityRole { Name = "coach" };
             var rolePeople = new IdentityRole { Name = "people" };
 
-            //roleManager.Create(roleAdmin);
-            //roleManager.Create(roleCoach);
-            //roleManager.Create(rolePeople);
+            roleManager.Create(roleAdmin);
+            roleManager.Create(roleCoach);
+            roleManager.Create(rolePeople);
 
-            Roles.CreateRole("admin");
+            //Roles.CreateRole("admin");
 
 
             Roles.AddUserToRole("admin@mail.loc", "admin");

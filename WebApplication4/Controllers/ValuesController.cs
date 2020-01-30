@@ -8,7 +8,7 @@ using System.Web.Security;
 
 namespace WebApplication4.Controllers
 {
-    [Authorize(Users = "admin@mail.loc")]
+    [Authorize]
     public class ValuesController : ApiController
     {
         // GET api/values

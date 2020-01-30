@@ -11,7 +11,7 @@ namespace WebApplication4.Models
     public class ApplicationUser : IdentityUser
     {
 
-        //public string Name { get; set; }    добавление нового св-ва User
+        //public string Name { get; set; }    добавление нового св-ва для User
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager, string authenticationType)
         {
             // Обратите внимание, что authenticationType должен совпадать с типом, определенным в CookieAuthenticationOptions.AuthenticationType
@@ -24,10 +24,10 @@ namespace WebApplication4.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        DbSet<Coach> Coachs { get; set; }
-        DbSet<Gym> Gyms { get; set; }
-        DbSet<TimingTraining> TimingTrainings { get; set; }
-        DbSet<TypeTraining> TypeTrainings { get; set; }
+        public virtual DbSet<Coach> Coaches { get; set; }
+        public virtual DbSet<Gym> Gyms { get; set; }
+        public virtual DbSet<TimingTraining> TimingTrainings { get; set; }
+        public virtual DbSet<TypeTraining> TypeTrainings { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

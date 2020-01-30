@@ -11,7 +11,7 @@ using WebApplication4.Models;
 
 namespace WebApplication4
 {
-    public class WebApiApplication : System.Web.HttpApplication
+    public class WebApiApplication : HttpApplication
     {
         protected void Application_Start()
         {
