@@ -139,4 +139,5 @@ C:\Users\r.aushev\source\repos\WebApplication4\WebApplication4\obj\Debug\WebAppl
 C:\Users\r.aushev\source\repos\WebApplication4\WebApplication4\obj\Debug\WebApplication4.csproj.GenerateResource.cache
 C:\Users\r.aushev\source\repos\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.addAlmostAllTable.resources
 C:\Users\r.aushev\source\repos\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.correctTableCoach.resources
+C:\Users\r.aushev\source\repos\WebApplication4\WebApplication4\obj\Debug\WebApplication4.Migrations.alterUser.resources
 C:\Users\r.aushev\source\repos\WebApplication4\WebApplication4\obj\Debug\WebApplication4.csprojAssemblyReference.cache

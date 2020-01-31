@@ -1,10 +1,15 @@
 ﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
+using System.Web;
 using System.Web.Http;
+//using System.Web.Mvc;
 using System.Web.Security;
 using WebApplication4.Models;
 
@@ -13,11 +18,20 @@ namespace WebApplication4.Controllers
     public class RolesController : ApiController
     {
         ApplicationDbContext db = new ApplicationDbContext();
+
         // GET: api/Roles
-        public IEnumerable<string> Get()
+        public IHttpActionResult Get()
         {
-            return new string[] { "value", "value2" };
+
+            //var roleStore = new RoleStore<IdentityRole>(db);
+            string[] roles = Roles.GetAllRoles();
+            //var roleMngr = new RoleManager<IdentityRole>(roleStore);
+
+            //var roles = roleMngr.Roles.ToList();
+
+            return Ok(roles);
         }
+
 
         // GET: api/Roles/5
         public string Get(int id)
@@ -26,17 +40,11 @@ namespace WebApplication4.Controllers
         }
 
         // POST: api/Roles
-        [HttpPost]
-        public void CreateRole([FromBody]string role)
-        {
-            string newRoleName = role.Trim();
 
-            if (!Roles.RoleExists(newRoleName)) {
-
-                Roles.CreateRole(newRoleName);
-
-            }
-        }
+        //public async Task<ActionResult<IEnumerable<RoleManager>>>([FromBody]string role)
+        //{
+            
+        //}
 
         // PUT: api/Roles/5
         [HttpPut]
