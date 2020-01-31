@@ -11,7 +11,7 @@ namespace WebApplication4.Models
     public class ApplicationUser : IdentityUser
     {
 
-        //public string Name { get; set; }    добавление нового св-ва для User
+        public string FIO { get; set; }   // добавление нового св-ва для User
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager, string authenticationType)
         {
             // Обратите внимание, что authenticationType должен совпадать с типом, определенным в CookieAuthenticationOptions.AuthenticationType
