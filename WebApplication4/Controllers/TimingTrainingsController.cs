@@ -19,7 +19,7 @@ namespace WebApplication4.Controllers
         // GET: api/TimingTrainings
         public IQueryable<TimingTraining> GetTimingTrainings()
         {
-            var timingTrainings = db.TimingTrainings.Include(g => g.Gym).Include(c => c.Coach).Include(t => t.Type);
+            IQueryable<TimingTraining> timingTrainings = db.TimingTrainings.Include(g => g.Gym).Include(c => c.Coach).Include(t => t.Type);
             return timingTrainings;
         }
 
