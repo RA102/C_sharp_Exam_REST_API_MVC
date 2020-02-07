@@ -17,9 +17,15 @@ namespace WebApplication4.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: api/TimingTrainings
-        public IQueryable<TimingTraining> GetTimingTrainings()
+        //public IQueryable<TimingTraining> GetTimingTrainings()
+        //{
+        //    IQueryable<TimingTraining> timingTrainings = db.TimingTrainings.Include(g => g.Gym).Include(c => c.Coach).Include(t => t.Type);
+        //    return timingTrainings;
+        //}
+
+        public List<TimingTraining> GetTimingTrainings()
         {
-            IQueryable<TimingTraining> timingTrainings = db.TimingTrainings.Include(g => g.Gym).Include(c => c.Coach).Include(t => t.Type);
+            var timingTrainings = db.TimingTrainings.Include(g => g.Gym).Include(c => c.Coach).Include(t => t.Type).ToList();
             return timingTrainings;
         }
 
