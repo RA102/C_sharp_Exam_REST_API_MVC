@@ -231,6 +231,10 @@
     <Compile Include="Migrations\202001310346507_alterUser.Designer.cs">
       <DependentUpon>202001310346507_alterUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002120958241_alterTableCoachChangeBirthDay.cs" />
+    <Compile Include="Migrations\202002120958241_alterTableCoachChangeBirthDay.Designer.cs">
+      <DependentUpon>202002120958241_alterTableCoachChangeBirthDay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -346,6 +350,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001310346507_alterUser.resx">
       <DependentUpon>202001310346507_alterUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002120958241_alterTableCoachChangeBirthDay.resx">
+      <DependentUpon>202002120958241_alterTableCoachChangeBirthDay.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

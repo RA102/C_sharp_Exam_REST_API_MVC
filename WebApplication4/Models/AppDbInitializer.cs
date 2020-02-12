@@ -19,7 +19,7 @@ namespace WebApplication4.Models
 
             var roleAdmin = new IdentityRole { Name = "admin" };
             var roleCoach = new IdentityRole { Name = "coach" };
-            var rolePeople = new IdentityRole { Name = "people" };
+            var rolePeople = new IdentityRole { Name = "client" };
 
             roleManager.Create(roleAdmin);
             roleManager.Create(roleCoach);

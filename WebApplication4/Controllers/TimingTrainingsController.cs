@@ -25,7 +25,7 @@ namespace WebApplication4.Controllers
 
         public List<TimingTraining> GetTimingTrainings()
         {
-            var timingTrainings = db.TimingTrainings.Include(g => g.Gym).Include(c => c.Coach).Include(t => t.Type).ToList();
+            List<TimingTraining> timingTrainings = db.TimingTrainings.Include(g => g.Gym).Include(c => c.Coach).Include(t => t.Type).ToList();
             return timingTrainings;
         }
 
