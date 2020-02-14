@@ -16,24 +16,26 @@ namespace WebApplication4.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: api/TimingTrainings
-        //public IQueryable<TimingTraining> GetTimingTrainings()
-        //{
-        //    IQueryable<TimingTraining> timingTrainings = db.TimingTrainings.Include(g => g.Gym).Include(c => c.Coach).Include(t => t.Type);
-        //    return timingTrainings;
-        //}
 
-        public List<TimingTraining> GetTimingTrainings()
+        #region GET: api/TimingTrainings
+        public IEnumerable<TimingTrainingDto> GetTimingTrainings()
         {
-            List<TimingTraining> timingTrainings = db.TimingTrainings.Include(g => g.Gym).Include(c => c.Coach).Include(t => t.Type).ToList();
-            return timingTrainings;
+            var timingTraining = from t in db.TimingTrainings
+                                 select new TimingTrainingDto() {
+                                     Number = t.Gym.Number,
+                                     FIO = t.Coach.FIO,
+                                     Quantity = t.Quantity
+                                 };
+            return timingTraining;
         }
 
-        // GET: api/TimingTrainings/5
-        [ResponseType(typeof(TimingTraining))]
+        #endregion
+
+        #region GET: api/TimingTrainings/5
+        [ResponseType(typeof(TimingTrainingDetailDto))]
         public IHttpActionResult GetTimingTraining(int id)
         {
-            TimingTraining timingTraining = db.TimingTrainings.Find(id);
+            var timingTraining = db.TimingTrainings.Find(id);
             if (timingTraining == null)
             {
                 return NotFound();
@@ -42,7 +44,9 @@ namespace WebApplication4.Controllers
             return Ok(timingTraining);
         }
 
-        // PUT: api/TimingTrainings/5
+        #endregion
+
+        #region PUT: api/TimingTrainings/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutTimingTraining(int id, TimingTraining timingTraining)
         {
@@ -77,7 +81,9 @@ namespace WebApplication4.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/TimingTrainings
+        #endregion
+
+        #region POST: api/TimingTrainings
         [ResponseType(typeof(TimingTraining))]
         public IHttpActionResult PostTimingTraining(TimingTraining timingTraining)
         {
@@ -89,10 +95,14 @@ namespace WebApplication4.Controllers
             db.TimingTrainings.Add(timingTraining);
             db.SaveChanges();
 
+            db.Entry(timingTraining).Reference(x => x.Gym);
+
             return CreatedAtRoute("DefaultApi", new { id = timingTraining.Id }, timingTraining);
         }
 
-        // DELETE: api/TimingTrainings/5
+        #endregion
+
+        #region DELETE: api/TimingTrainings/5
         [ResponseType(typeof(TimingTraining))]
         public IHttpActionResult DeleteTimingTraining(int id)
         {
@@ -107,6 +117,8 @@ namespace WebApplication4.Controllers
 
             return Ok(timingTraining);
         }
+
+        #endregion
 
         protected override void Dispose(bool disposing)
         {

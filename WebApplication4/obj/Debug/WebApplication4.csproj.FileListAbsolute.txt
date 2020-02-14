@@ -285,3 +285,4 @@ D:\step\C# ASP.net AJAX\C#-API\C_sharp_Exam_REST_API_MVC\WebApplication4\obj\Deb
 D:\step\C# ASP.net AJAX\C#-API\C_sharp_Exam_REST_API_MVC\WebApplication4\obj\Debug\WebApplication4.dll
 D:\step\C# ASP.net AJAX\C#-API\C_sharp_Exam_REST_API_MVC\WebApplication4\obj\Debug\WebApplication4.pdb
 D:\step\C# ASP.net AJAX\C#-API\C_sharp_Exam_REST_API_MVC\WebApplication4\obj\Debug\WebApplication4.Migrations.alterTableCoachChangeBirthDay.resources
+D:\step\C# ASP.net AJAX\C#-API\C_sharp_Exam_REST_API_MVC\WebApplication4\obj\Debug\WebApplication4.Migrations.changeTimingTraining.resources
