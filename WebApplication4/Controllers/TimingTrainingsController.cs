@@ -95,7 +95,8 @@ namespace WebApplication4.Controllers
             db.TimingTrainings.Add(timingTraining);
             db.SaveChanges();
 
-            db.Entry(timingTraining).Reference(x => x.Gym);
+            db.Entry(timingTraining).Reference(x => x.Gym).Load();
+            db.Entry(timingTraining).Reference()
 
             return CreatedAtRoute("DefaultApi", new { id = timingTraining.Id }, timingTraining);
         }
